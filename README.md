@@ -1,4 +1,4 @@
-# monitor_v2.0
+# monitor_v2.0 监控系统v2.0（基于Vuejs）
 
 ## Project setup
 ```
