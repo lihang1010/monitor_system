@@ -2,38 +2,22 @@
   <div class="login-container">
     <div class="login-form">
       <h3 class="login-title">智能机监控管理系统</h3>
-      <!-- <el-form :model="loginForm" :rules="rules" status-icon ref="loginForm" class="login-LoginForm">
-        <el-form-item prop="username">
-          <el-input v-model="loginForm.username" type="text" autocomplete="off" placeholder="请输入用户名"></el-input>
-        </el-form-item>
-        <el-form-item prop="password">
-          <el-input v-model="loginForm.password" type="password" autocomplete="off" placeholder="请输入密码"></el-input>
-        </el-form-item>
-        <el-form-item label="记住密码">
-          <el-switch v-model="loginForm.rememberMe"></el-switch>
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" @click="submitForm('loginForm')" class="login-btn">登录</el-button>
-          <el-button @click="resetForm('loginForm')" class="reset-btn">重置</el-button>
-        </el-form-item>
-      </el-form> -->
       <a-form-model ref="loginForm" :model="loginForm" :rules="rules">
         <a-form-model-item ref="username" prop="username">
-          <a-input v-model="loginForm.username" placeholder="请输入用户名" @blur="
+          <a-input size="large" v-model="loginForm.username" placeholder="请输入用户名" @blur="
           () => {
             $refs.username.onFieldBlur();
           }
         " />
         </a-form-model-item>
         <a-form-model-item prop="password">
-          <a-input type="password" v-model="loginForm.password" placeholder="请输入密码" />
+          <a-input size="large" type="password" v-model="loginForm.password" placeholder="请输入密码" />
         </a-form-model-item>
-        <a-form-model-item label="记住密码" prop="rememberMe" :colon=false>
+        <a-form-model-item label="记住密码" prop="rememberMe" :colon=false style="display: flex;">
           <a-switch v-model="loginForm.rememberMe" />
         </a-form-model-item>
         <a-form-model-item>
-          <a-button type="primary" @click="onSubmit('loginForm')">登录</a-button>
-          <a-button style="margin-left: 10px;" @click="resetForm('loginForm')">重置</a-button>
+          <a-button type="primary" size="large" block @click="onSubmit('loginForm')">登录</a-button>
         </a-form-model-item>
       </a-form-model>
     </div>
