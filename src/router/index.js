@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '@/views/login'
 import Dashboard from '@/views/dashboard'
-import Ant from '@/views/ant'
 
 Vue.use(VueRouter)
 
@@ -16,11 +15,6 @@ const routes = [
     path: '/',
     name: 'Dashboard',
     component: Dashboard
-  },
-  {
-    path: '/ant',
-    name: 'Ant',
-    component: Ant
   }
 ]
 

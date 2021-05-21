@@ -1,19 +1,21 @@
 <template>
-  <div class="container">
-    <!-- <header-nav></header-nav> -->
+  <a-layout class="container">
     <left-bar></left-bar>
-  </div>
+  </a-layout>
 </template>
 
 <script>
-// import HeaderNav from '@/layouts/HeaderNav'
 import LeftBar from '@/layouts/LeftBar'
 
 export default {
   name: 'Dashboard',
   components: {
-    // HeaderNav,
     LeftBar
+  },
+  data () {
+    return {
+      collapsed: false
+    }
   }
 }
 </script>
