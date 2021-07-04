@@ -1,6 +1,6 @@
 <template>
   <!-- 侧边栏组件:  系统概况 跟交换机 机框1 系统日志 资源管理 用户管理 系统设置 #13c2c2-->
-  <a-layout-sider :class="['side-menu', 'shadow']" width="256px" :collapsible="collapsible" v-model="collapsed"
+  <a-layout-sider :class="['side-menu', 'shadow']" width="256px" v-model="collapsed"
     :trigger="null">
     <div :class="['logo']">
       <router-link to="/">
@@ -8,7 +8,7 @@
         <h1>{{systemName}}</h1>
       </router-link>
     </div>
-    <a-menu theme="dark" mode="inline" :default-selected-keys="['1']">
+    <a-menu theme="dark" mode="inline" :default-selected-keys="['1']" :collapsed="true">
       <a-menu-item key="1">
         <a-icon type="home" />
         <span class="nav-text">系统概况</span>
@@ -44,11 +44,10 @@
 <script>
 export default {
   name: 'LeftBar',
+  props: ['collapsed'],
   data () {
     return {
-      systemName: '智能监控管理系统',
-      collapsible: true,
-      collapsed: false
+      systemName: '智能监控管理系统'
     }
   }
 }
